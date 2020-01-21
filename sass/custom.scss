@@ -1,0 +1,195 @@
+/*varible*/
+$brand_color: #FF7538;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: top;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+body {
+    font-family: 'Lineto Brown';
+}
+
+
+.tracking {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .step {
+        position: relative;
+        padding: 20px;
+        padding-left: 50px;
+        padding-bottom: 40px;
+
+        .square {
+            &:before {
+                content: url('../images/tick.svg');
+                background: #ccc;
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                left: 10px;
+                padding: 5px;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0px;
+                left: 24px;
+                border-left: 3px dashed #ccc;
+                top: 50px;
+
+            }
+        }
+
+
+        &.active {
+
+            &:after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0px;
+                left: 24px;
+                border-left: 3px solid red;
+                top: 50px;
+
+            }
+
+            .square {
+                &:before {
+                    background: red;
+                }
+            }
+        }
+
+    }
+
+}
